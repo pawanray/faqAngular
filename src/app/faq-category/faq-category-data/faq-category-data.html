@@ -1,0 +1,26 @@
+<div class="row">
+
+        <div class="col-sm-12">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+            <th>Sr. no</th>
+            <th>Category Name</th>
+            <th>Actions</th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let categories of getCategoryData; let i = index">
+                  <td>{{i+1}}</td>
+                    <td>{{categories.name}}</td>
+                    <td>
+                        <button class="btn btn-default btn-sm" (click)="editCategory(categories,'editCategory',true)"><i class="glyphicon glyphicon-pencil"></i></button>
+                        <button class="btn btn-danger btn-sm" (click)="deleteCategory(categories)"><i class="glyphicon glyphicon-trash"></i></button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    </div>
+    
+      

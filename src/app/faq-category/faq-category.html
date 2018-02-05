@@ -1,0 +1,21 @@
+<div class="row">
+  <div class="col-sm-12 page-heading">FAQ Category</div>
+</div>
+<div class="row">
+  <div class="col-sm-12">
+    <div class="row form-group">
+      <div class="col-sm-6">
+        <website-name (sendWebsiteId)="getWebsiteId($event)" [getwebsiteNameList]="websiteNameList"></website-name>
+      </div>
+      <div class="col-sm-2 pull-right text-right">
+        <button class="btn btn-danger" (click)="addCategory('addCategory',true)">Add Category</button>
+        <!-- {{getWebisteId}}
+        {{addCategory}} -->
+      </div>
+    </div>
+  </div>
+</div>
+{{getEditCategoryObj|json}}
+<app-modal [getfaqModalData]="faqModalData" (sendAddCategoryObj)="getAddCategoryObj($event)" [editCategoryObject]="getEditCategoryObj"
+  [getWebiteData]="websiteNameList" (sendupdateCategoryObj)="getUpdatedCategory($event)"></app-modal>
+<faq-category-data [getCategoryData]="sendCategoryData" (sendEditCaegoryObj)="getEditCategory($event)" (curerentCategoryObj)="getDeleteCategoryObj($event)"></faq-category-data>

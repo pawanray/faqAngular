@@ -1,0 +1,8 @@
+ <label class="col-sm-4">Website Name</label>
+        <div class="col-sm-8">
+          <select class="form-control" [(ngModel)]="websiteId" (change)="sendWebsiteIdHandler()">
+            <option>Select Website</option>
+            <option [value]="website.id" *ngFor="let website of getwebsiteNameList">{{website.name}}</option>
+          </select>
+        </div>
+    
